@@ -1,21 +1,45 @@
 {
-  "title": "Crear single node local cluster",
-  "description": "Introduccion a minikube, kubectl.",
+  "title": "Kubernetes",
+  "description": "Kubernetes basic training",
   "difficulty": "Beginner",
-  "time": "5-10",
+  "time": "25-30",
   "details": {
     "steps": [
       {
-        "title": "Step 1",
-        "text": "step1.md"
+        "title": "Single node local cluster",
+        "text": "minikube.md"
       },
       {
-        "title": "Step 2",
-        "text": "step2.md"
+        "title": "Namespaces",
+        "text": "namespaces.md"
       },
       {
-        "title": "Step 3",
-        "text": "step3.md"
+        "title": "Pods",
+        "text": "pods.md"
+      },
+      {
+        "title": "ConfigMaps",
+        "text": "configs.md"
+      },
+      {
+        "title": "Deployments",
+        "text": "deployments.md"
+      },
+      {
+        "title": "Volumes",
+        "text": "volumes.md"
+      },
+      {
+        "title": "Services",
+        "text": "services.md"
+      },
+      {
+        "title": "Dashboard",
+        "text": "dashboard.md"
+      },
+      {
+        "title": "Helm",
+        "text": "helm.md"
       }
     ],
     "intro": {
