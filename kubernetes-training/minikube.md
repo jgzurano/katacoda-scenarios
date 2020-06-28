@@ -2,18 +2,38 @@
 
 ## Crear un cluster local de kubernetes single node usando minikube
 
-install minikube
-This is an _example_ of creating a scenario and running a **command**
-`echo 'Hello World'`{{execute}}
+En este escenario partimos de una version reciente de minikube pre-instalada por Katacoda.
+> Luego del curso, si queres probar instalar minikube localmente seguí estas [instrucciones](https://kubernetes.io/docs/tasks/tools/install-minikube/)
+
+### Uso de minikube
+
+#### Start minikube
+
+`minikube start`{{execute}}
+
+#### Status
+
+`minikube status`{{execute}}
+
+#### Update
+
+`minikube update-check`{{execute}}
 
 ## Interactuar con el cluster usando kubectl
 
-install kubectl
-text
-text
+En este escenario partimos de una version pre-instalada de kubectl.
+> Instrucciones de [instalación de kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
 
-## Soluciones locales alternativas
+### Uso de kubectl y contextos
 
-links
-text
-text
+`kubectl config current-context`{{execute}}
+
+`kubectl config get-contexts`{{execute}}
+
+`kubectl config use-context`{{execute}}
+
+`kubectl version --short`{{execute}}
+
+## Alternativa a minikube
+
+[Kind](https://kind.sigs.k8s.io/)

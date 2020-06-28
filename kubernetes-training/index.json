@@ -44,7 +44,9 @@
       }
     ],
     "intro": {
-      "text": "intro.md"
+      "text": "intro.md",
+      "code": "env-init.sh",
+      "credits": "Juan Zurano"
     },
     "finish": {
       "text": "finish.md"
