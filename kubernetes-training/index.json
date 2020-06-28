@@ -1,12 +1,13 @@
 {
-  "title": "Kubernetes",
-  "description": "Kubernetes basic training",
+  "title": "Kubernetes Training",
+  "icon": "fa-kubernetes",
+  "description": "Aprende los conceptos básicos de Kubernetes",
   "difficulty": "Beginner",
   "time": "25-30",
   "details": {
     "steps": [
       {
-        "title": "Single node local cluster",
+        "title": "Instalación de Minikube",
         "text": "minikube.md"
       },
       {
@@ -18,16 +19,16 @@
         "text": "pods.md"
       },
       {
-        "title": "ConfigMaps",
-        "text": "configs.md"
-      },
-      {
-        "title": "Deployments",
-        "text": "deployments.md"
+        "title": "ConfigMaps y Secrets",
+        "text": "configs_secrets.md"
       },
       {
         "title": "Volumes",
         "text": "volumes.md"
+      },
+      {
+        "title": "Deployments",
+        "text": "deployments.md"
       },
       {
         "title": "Services",
@@ -51,6 +52,7 @@
   },
   "environment": {
     "uilayout": "terminal",
+    "icon": "fa-kubernetes",
     "showdashboard": true,
     "dashboards": [
       {"name": "Kubernetes Dashboard", "port": 30000}
