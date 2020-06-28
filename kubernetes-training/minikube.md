@@ -7,9 +7,19 @@ En este escenario partimos de una version reciente de minikube pre-instalada por
 
 ### Uso de minikube
 
-#### Start minikube
+#### Iniciar minikube
 
-`minikube start`{{execute}}
+#### vm-drivers
+
+KVM2 - Recommended Linux driver
+hyperkit - Recommended macOS driver
+virtualbox - Recommended Windows driver
+none - bare-metal execution on Linux, at the expense of system security and reliability
+
+`minikube start --driver none`{{execute}}
+
+Especificar version de kubernetes
+`minikube start --kubernetes-version=1.16.8`{{execute}}
 
 #### Status
 
@@ -19,6 +29,10 @@ En este escenario partimos de una version reciente de minikube pre-instalada por
 
 `minikube update-check`{{execute}}
 
+#### Teardown cluster
+
+`minikube delete`{{execute}}
+
 ## Interactuar con el cluster usando kubectl
 
 En este escenario partimos de una version pre-instalada de kubectl.
@@ -26,9 +40,9 @@ En este escenario partimos de una version pre-instalada de kubectl.
 
 ### Uso de kubectl y contextos
 
-`kubectl config current-context`{{execute}}
-
 `kubectl config get-contexts`{{execute}}
+
+`kubectl config current-context`{{execute}}
 
 `kubectl config use-context`{{execute}}
 
