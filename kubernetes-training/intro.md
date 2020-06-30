@@ -1,8 +1,6 @@
-# Kubernetes fundamentals #
+![Kubernetes](https://raw.githubusercontent.com/jgzurano/katacoda-scenarios/master/kubernetes-training/assets/kubernetes.png "Kubernetes")
 
-![Kubernetes](/jgzurano/katakoda-scenarios/kubernetes-training/assets/kubernetes.png "Kubernetes")
-
-## Indice ##
+# Indice #
 
 ## Single node local cluster ##
 
