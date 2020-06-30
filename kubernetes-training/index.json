@@ -7,8 +7,12 @@
   "details": {
     "steps": [
       {
-        "title": "Instalación de Minikube",
+        "title": "Minikube: Single node local cluster",
         "text": "minikube.md"
+      },
+      {
+        "title": "Kubectl: Interactuar con el cluster usando kubectl",
+        "text": "kubectl.md"
       },
       {
         "title": "Namespaces",
