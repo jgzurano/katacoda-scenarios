@@ -2,11 +2,15 @@
 Crear un cluster local de kubernetes single node usando minikube
 
 En este escenario partimos de una version reciente de minikube pre-instalada por Katacoda.
-> Luego del curso, si queres probar instalar minikube localmente seguí estas [instrucciones](https://kubernetes.io/docs/tasks/tools/install-minikube/)
+> Luego del curso, si queres instalar minikube localmente: [instrucciones](https://kubernetes.io/es/docs/tasks/tools/install-minikube/)
 
-Iniciar minikube
+Iniciar minikube localmente
 
 `minikube start --driver none`{{execute}}
+
+Mostrar status
+
+`minikube status`{{execute}}
 
 vm-drivers disponibles para cada OS
 
@@ -16,13 +20,17 @@ virtualbox - Recommended Windows driver
 none - bare-metal execution on Linux, at the expense of system security and reliability
 ```
 
-Especificar version de kubernetes
+Iniciar cluster especificando version de kubernetes
 
 `minikube start --kubernetes-version=1.16.8`{{execute}}
 
-Mostrar status
+Iniciar dashboard addon
 
-`minikube status`{{execute}}
+`minikube addons enable dashboard`{{execute}}
+
+Listar addons
+
+`minikube addons list`{{execute}}
 
 Actualizaciones disponibles
 
