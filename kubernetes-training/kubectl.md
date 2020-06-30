@@ -9,6 +9,6 @@ En este escenario partimos de una version pre-instalada de kubectl.
 
 `kubectl config use-context minikube`{{execute}}
 
-`kubectl version --short`{{execute}}
-
 `kubectl config view`{{execute}}
+
+`kubectl version --short`{{execute}}
