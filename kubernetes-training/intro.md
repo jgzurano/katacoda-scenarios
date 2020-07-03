@@ -1,12 +1,10 @@
 ![Kubernetes](https://raw.githubusercontent.com/jgzurano/katacoda-scenarios/master/kubernetes-training/assets/kubernetes.png "Kubernetes")
 
-# Indice #
-
-## Single node local cluster ##
+## Minikube: Single node local cluster ##
 
 - Crear un cluster local de kubernetes single node usando minikube.
-- Uso de kubectl, contextos.
-- Soluciones locales alternativas.
+- Uso de kubectl, contextos, kubeconfig.
+- Dashboard.
 
 ## Namespaces ##
 
@@ -15,23 +13,39 @@
 
 ## Pods ##
 
-- Kubernetes APIs, especificacion.
+- Kubernetes APIs, especificación.
 - Crear, listar, obtener logs.
 - Actualizar, borrar pods.
 - Labels/Selectors.
 - Resources: requests y limits.
 
+## Configs y Secrets ##
+
+- Concepto, diferencias, usos de cada uno.
+- Operaciones.
+
+## Volumes ##
+
+- Concepto, tipos, usos de cada uno.
+- Operaciones.
+
 ## Deployments ##
 
-- Usos típicos, Especificacion, ReplicaSets, selector.
+- Usos típicos, especificación, ReplicaSets, selector.
 - Crear deployment en un namespace.
 - Actualizar deployment, escalar replicas.
 
 ## Services ##
 
-- Usos típicos, especificacion.
+- Usos típicos, especificación.
 - Tipos de services.
 - Crear service, selector.
+
+## Autoscaling ##
+
+- Tipos de autoscaling.
+- Pod level autoscaling: hpa, vpa.
+- Ejemplo.
 
 ## Tools adicionales ##
 

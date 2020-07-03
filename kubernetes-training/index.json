@@ -15,6 +15,10 @@
         "text": "kubectl.md"
       },
       {
+        "title": "Dashboard",
+        "text": "dashboard.md"
+      },
+      {
         "title": "Namespaces",
         "text": "namespaces.md"
       },
@@ -23,7 +27,7 @@
         "text": "pods.md"
       },
       {
-        "title": "ConfigMaps y Secrets",
+        "title": "Configs y Secrets",
         "text": "configs_secrets.md"
       },
       {
@@ -39,12 +43,16 @@
         "text": "services.md"
       },
       {
-        "title": "Dashboard",
-        "text": "dashboard.md"
+        "title": "Autoscaling",
+        "text": "autoscaling.md"
       },
       {
         "title": "Helm",
         "text": "helm.md"
+      },
+      {
+        "title": "Tools adicionales",
+        "text": "tools.md"
       }
     ],
     "intro": {

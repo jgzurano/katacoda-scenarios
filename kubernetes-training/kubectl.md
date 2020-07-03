@@ -3,6 +3,8 @@ En este escenario partimos de una version pre-instalada de kubectl.
 
 #### Uso de kubectl y contextos
 
+syntax: `kubectl [command] [TYPE] [NAME] [flags]`
+
 `kubectl config get-contexts`{{execute}}
 
 `kubectl config current-context`{{execute}}

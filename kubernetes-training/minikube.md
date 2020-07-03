@@ -3,10 +3,6 @@ Crear un cluster local de kubernetes single node usando minikube
 En este escenario partimos de una version reciente de minikube pre-instalada por Katacoda.
 > Luego del curso, si queres instalar minikube localmente: [instrucciones](https://kubernetes.io/es/docs/tasks/tools/install-minikube/)
 
-Alternativa a minikube
-
-[Kind](https://kind.sigs.k8s.io/)
-
 Iniciar minikube localmente
 
 `minikube start --driver none`{{execute}}
@@ -42,3 +38,12 @@ Actualizaciones disponibles
 Eliminar cluster
 
 `minikube delete`{{execute}}
+
+Alternativas a minikube
+
+[Kind](https://kind.sigs.k8s.io/)
+[k3d](https://k3d.io/)
+
+- Cluster en docker sin usar una VM.
+- Startup más rapido, menor uso de recursos que minikube.
+- Multi-node clusters y HA.
