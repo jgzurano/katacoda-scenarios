@@ -43,8 +43,8 @@
         "text": "services.md"
       },
       {
-        "title": "Autoscaling",
-        "text": "autoscaling.md"
+        "title": "Autoscaling"
+        // "text": "autoscaling.md"
       },
       {
         "title": "Helm",
