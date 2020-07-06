@@ -16,7 +16,7 @@ syntax: `kubectl [command] [TYPE] [NAME] [flags]`
     Especificar namespace con `-n`
     Modificar el output default por json o yaml `-o yaml`
 
-kubeconfig
+#### kubeconfig
 
 mostrar config (`$HOME/.kube/config`)
 `kubectl config view`{{execute}}
@@ -24,7 +24,7 @@ mostrar config (`$HOME/.kube/config`)
 Completar comandos kubectl en bash
 `echo 'source <(kubectl completion bash)' >>~/.bashrc`{{execute}}
 
-#### Uso de kubectl y contextos
+#### Uso de kubectl
 
 version de client
 `kubectl version --client --short`{{execute}}
@@ -37,7 +37,7 @@ version de client y server
 listar clusters configurados
 `kubectl config get-clusters`{{execute}}
 
-Contextos (cluster, user, namespace)
+#### Contextos (cluster, user, namespace)
 
 syntax: kubectl config set-context [NAME | --current] [--cluster=cluster_nickname] [--user=user_nickname]
 [--namespace=namespace] [options]

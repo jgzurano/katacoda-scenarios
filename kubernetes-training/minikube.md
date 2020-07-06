@@ -25,6 +25,7 @@ none - bare-metal execution on Linux, at the expense of system security and reli
 Mostrar status
 
 `minikube status`{{execute}}
+
 `minikube config view`{{execute}}
 
 Iniciar cluster especificando version de kubernetes
@@ -32,15 +33,8 @@ Iniciar cluster especificando version de kubernetes
 `minikube start --kubernetes-version=1.16.8`{{execute}}
 
 Iniciar un segundo cluster cluster (Nota: No funciona si estamos usando --driver none(bare-metal) como driver)
+
 `minikube start -p cluster2`{{execute}}
-
-Iniciar dashboard addon
-
-`minikube addons enable dashboard`{{execute}}
-
-Listar addons
-
-`minikube addons list`{{execute}}
 
 Actualizaciones disponibles
 

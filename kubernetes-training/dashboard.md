@@ -1,9 +1,8 @@
-This is your first step.
+Iniciar dashboard addon
+`minikube addons enable dashboard`{{execute}}
 
-## Task
+Iniciar metrics-server addon
+`minikube addons enable metrics-server`{{execute}}
 
-Este es un ejemplo de __example__
-
-This is an _example_ of creating a scenario and running a **command**
-
-`echo 'Hello World'`{{execute}}
+Listar addons
+`minikube addons list`{{execute}}
