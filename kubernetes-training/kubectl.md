@@ -19,6 +19,7 @@ syntax: `kubectl [command] [TYPE] [NAME] [flags]`
 #### kubeconfig
 
 mostrar config (`$HOME/.kube/config`)
+
 `kubectl config view`{{execute}}
 
 Completar comandos kubectl en bash
@@ -27,14 +28,17 @@ Completar comandos kubectl en bash
 #### Uso de kubectl
 
 version de client
+
 `kubectl version --client --short`{{execute}}
 
 version de client y server
+
 `kubectl version --short`{{execute}}
 
 `kubectl cluster-info`{{execute}}
 
 listar clusters configurados
+
 `kubectl config get-clusters`{{execute}}
 
 #### Contextos (cluster, user, namespace)
