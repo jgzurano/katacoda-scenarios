@@ -1,13 +1,28 @@
-# Namespaces
+#### Concepto, namespaces predefinidos y default
 
-## Concepto, namespaces predefinidos y default
+- Permiten separar recursos dentro de un cluster.
+- Permiten limitar recursos dentro del namespace.
+- Proveen un scope para nombres de recursos.
 
-### Task1
+- Namespaces predefinidos
 
-## Crear, listar, borrar
+  - default: namespace default para objetos que no definen su namespace.
+  - kube-system: namespace para objetos creados por Kubernetes system
+  - kube-public: namespace publico (de lectura para todos los usuarios).
 
-### Task1
+- Namespaced objects: pods, services, replication controllers, etc.
+- Non namespaced objects: nodes, namespaces, persistenvolumes, clusterroles, etc
 
-This is an _example_ of creating a scenario and running a **command**
+#### Operaciones
 
-`echo 'Hello World'`{{execute}}
+Crear
+
+`kubectl create ns <ns_name>`{{execute}}
+
+Listar
+
+`kubectl get ns`{{execute}}
+
+Borrar
+
+`kubectl del ns <ns_name>`{{execute}}
