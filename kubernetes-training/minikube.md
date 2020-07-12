@@ -5,7 +5,8 @@ En este escenario partimos de una version reciente de minikube pre-instalada por
 
 - Permite crear clusters locales de kubernetes (single node) utilizando una virtual machine.
 - Cross-platform (Linux, macOS, Windows).
-- Multiple container runtimes (CRI-O, containerd, docker)- Features: LoadBalancer, filesystem mounts, FeatureGates.
+- Multiple container runtimes (CRI-O, containerd, docker).
+- Features: LoadBalancer, filesystem mounts, FeatureGates.
 - NVIDIA GPU support - machine learning.
 - Filesystem mounts.
 - Addons.

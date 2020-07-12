@@ -3,7 +3,7 @@
   "icon": "fa-kubernetes",
   "description": "Aprende los conceptos básicos de Kubernetes",
   "difficulty": "Beginner",
-  "time": "25-30",
+  "time": "30",
   "details": {
     "steps": [
       {
@@ -64,7 +64,12 @@
       "text": "finish.md"
     }
   },
+  "assets": {
+    "host01": [
+      {"file": "*.yaml", "target": "/root"}      ]
+  },
   "environment": {
+    "showide": true,
     "uilayout": "terminal",
     "icon": "fa-kubernetes",
     "showdashboard": true,
