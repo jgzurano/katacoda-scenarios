@@ -31,7 +31,7 @@ spec:
     - containerPort: 80
 ```
 
-##### Campos necesarios
+##### Campos
 
 - apiVersion - Que version de la Kubernetes API usamos para crear este objeto.
 - kind - Tipo de objeto que creamos.
@@ -42,12 +42,52 @@ Crear pod usando yaml file
 
 `kubectl create -f pod.yaml`{{execute}}
 
-Crear pod (comando single line)
+Crear pod (comando oneliner)
 
 `kubectl run mypod --generator=run-pod/v1 --image nginx`{{execute}}
 
-kubectl get pods -n default
+Obtener pods de un namespace especifico
 
-#### POD Logs
+`kubectl get pods -n <namespace>`
+`kubectl get pods --namespace <namespace>`
+
+Obtener pods de todos los namespaces
+
+`kubectl get pods -A`{{execute}}
+`kubectl get pods --all-namespaces`{{execute}}
+
+Debug: problemas en la creación de un POD
+
+`kubectl describe test-pod`{{execute}}
+
+#### Logs
+
+Obtener logs de un pod
 
 `kubectl logs mypod`{{execute}}
+
+Tail logs
+`kubectl logs -f mypod`{{execute}}
+
+#### Ejecutar comandos en un POD/container
+
+`kubectl exec -it test-pod -- bash`{{execute}}
+
+#### Labels
+
+- Key/value pairs que se adjuntan a los objetos en Kubernetes.
+- Permiten organizan y seleccionar objetos.
+- Se agregan en la creación del objeto, pueden modificarse.
+- Pueden repetirse en distintos objetos.
+
+#### Label selector
+
+Identifica un conjunto de objetos por sus labels.
+
+Ejemplos
+
+`kubectl get pod -l environment=sandbox`{{execute}}
+
+`kubectl get pod -l name=test,environment!=sandbox`{{execute}}
+
+`kubectl delete pod -l name=test`{{execute}}

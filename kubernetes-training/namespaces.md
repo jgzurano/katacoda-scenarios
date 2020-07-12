@@ -36,3 +36,7 @@ Listar
 Borrar
 
 `kubectl del ns <ns_name>`{{execute}}
+
+Setear namespace en nuestro contexto actual
+
+`kubectl config set-context --current --namespace=NAMESPACE`

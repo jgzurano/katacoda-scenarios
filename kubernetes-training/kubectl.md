@@ -37,6 +37,8 @@ version de client y server
 
 `kubectl cluster-info`{{execute}}
 
+`kubectl get nodes`{{execute}}
+
 listar clusters configurados
 
 `kubectl config get-clusters`{{execute}}
