@@ -45,7 +45,7 @@ Eliminar cluster
 
 `minikube delete`{{execute}}
 
-Alternativas a minikube
+Alternativa a minikube
 
 [Kind](https://kind.sigs.k8s.io/)
 
@@ -53,5 +53,3 @@ Alternativas a minikube
 - Startup más rapido, menor uso de recursos que minikube.
 - Multi-node clusters y HA.
 - Pensado para testear el desarrollo propio de Kubernetes, se puede utilizar para pruebas locales o pipelines.
-
-[k3d](https://k3d.io/)

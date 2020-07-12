@@ -8,25 +8,24 @@
 
 ## Namespaces ##
 
-- Concepto, namespaces predefinidos y default
+- Concepto, namespaces predefinidos y default.
 - Crear, listar, borrar.
 
 ## Pods ##
 
 - Kubernetes APIs, especificación.
-- Crear, listar, obtener logs.
-- Actualizar, borrar pods.
+- Crear, listar, describe, logs, borrar pods.
 - Labels/Selectors.
 - Resources: requests y limits.
 
 ## Configs y Secrets ##
 
-- Concepto, diferencias, usos de cada uno.
+- Concepto, usos.
 - Operaciones.
 
 ## Volumes ##
 
-- Concepto, tipos, usos de cada uno.
+- Concepto, tipos, usos.
 - Operaciones.
 
 ## Deployments ##
@@ -49,5 +48,5 @@
 
 ## Tools adicionales ##
 
-- Helm templates, deployment, versioning.
+- Helm templates.
 - Otras tools.

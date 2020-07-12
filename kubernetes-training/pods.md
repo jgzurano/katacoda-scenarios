@@ -40,7 +40,7 @@ spec:
 
 Crear pod usando yaml file
 
-`kubectl apply -f pod.yaml`{{execute}}
+`kubectl create -f pod.yaml`{{execute}}
 
 Crear pod (comando single line)
 
