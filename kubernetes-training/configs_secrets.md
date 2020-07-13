@@ -28,8 +28,9 @@ Crear usando template
 
 Obtener configmaps
 
-`kubectl get configmaps`{{execute}}
 `kubectl get cm`{{execute}}
+
+`kubectl get configmaps`{{execute}}
 
 Usar configmap en un pod como variables de entorno
 

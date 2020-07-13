@@ -1,9 +1,8 @@
-This is your first step.
+En este escenario partimos de una version pre-instalada de helm.
+> Instrucciones de [helm](https://helm.sh/docs/intro/install/)
 
-## Task
+`helm ls --all-namespaces`{{execute}}
 
-Este es un ejemplo de __example__
+`helm create <chart-name>`
 
-This is an _example_ of creating a scenario and running a **command**
-
-`echo 'Hello World'`{{execute}}
+`helm upgrade -i <release-name> <chart-name>`
