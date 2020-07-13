@@ -1,12 +1,37 @@
-Storage
-A Pod can specify a set of shared storage volumes . All containers in the Pod can access the shared volumes, allowing those containers to share data. Volumes also allow persistent data in a Pod to survive in case one of the containers within needs to be restarted. See Volumes for more information on how Kubernetes implements shared storage in a Pod.
+#### Volumes
 
-This is your first step.
+Resuelven el problema de persistencia en pods (ephemeral storage).
+Compartir archivos entre containers de un pod.
+Mismo ciclo de vida del pod.
 
-## Task
+Algunos tipos de volumes
 
-Este es un ejemplo de __example__
+- emptyDir: asignados por defecto con la creación de un POD.
+- hostPath: monta un volumen del nodo en el pod.
+- awsElasticBlockStore: Amazon Web Services (AWS) EBS Volume
+- azureDisk: Microsoft Azure Data Disk
+- configMap
+- secret
+- FlexVolume
 
-This is an _example_ of creating a scenario and running a **command**
+Ejemplo aws EBS
 
-`echo 'Hello World'`{{execute}}
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: test-pod-ebs
+spec:
+  containers:
+    - image: k8s.gcr.io/test-webserver
+      name: test-container
+      volumeMounts:
+        - mountPath: /test-ebs
+          name: test-volume
+  volumes:
+  - name: test-volume
+      # This AWS EBS volume must already exist.
+      awsElasticBlockStore:
+      volumeID: <volume-id>
+      fsType: ext4
+```

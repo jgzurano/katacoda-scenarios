@@ -1,12 +1,59 @@
-Namespaces and DNS
-When you create a Service, it creates a corresponding DNS entry. This entry is of the form <service-name>.<namespace-name>.svc.cluster.local, which means that if a container just uses <service-name>, it will resolve to the service which is local to a namespace. This is useful for using the same configuration across multiple namespaces such as Development, Staging and Production. If you want to reach across namespaces, you need to use the fully qualified domain name (FQDN).
+#### Services
 
-This is your first step.
+Es una forma de exponer una aplicación como un network service.
+Actua como un load balancer de un conjunto de Pods.
+Discovery automatico.
 
-## Task
+Un service apunta comunmente a un conjunto de pods que son seleccionados mediante un selector.
 
-Este es un ejemplo de __example__
+Tambien es posible que el servicio apunte a:
 
-This is an _example_ of creating a scenario and running a **command**
+- Dirección/puerto
+- Otro Service
+En estos casos se utiliza un Service sin selector.
 
-`echo 'Hello World'`{{execute}}
+Fully qualified domain name (FQDN):
+`<service-name>.<namespace-name>.svc.cluster.local`
+
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: test-service
+spec:
+  selector:
+    app: nginx
+  ports:
+    - protocol: TCP
+      port: 8000
+      targetPort: 80
+  type: ClusterIP
+```
+
+type: permite especificar que tipo de servicio queremos. Por default es de type: ClusterIP.
+
+Distintos tipos disponibles:
+
+- ClusterIP: Expone el servicio en una cluster-internal IP address. El servicio solo es accesible dentro del cluster. Este es el tipo de servicio por default cuando no especificamos uno.
+
+- NodePort: Expone el servicio en cada nodo en un puerto estatico (NodePort). Es posible acceder el servicio desde fuera del cluster usando `<NodeIP>:<NodePort>`.
+
+- LoadBalancer: Expone el servicio externamente usando un load balancer del cloud provider.
+
+- ExternalName: Mapea el servicio a lo que especifica el externalName (ejemplo: foo.example.com). Retorna un CNAME record, no realiza ningun tipo de proxy.
+
+##### Crear service
+
+`kubectl create -f service.yaml`{{execute}}
+
+Otra forma de crear un service
+
+`kubectl expose deployment test-deployment --port=8000 --target-port=80`{{execute}}
+
+Obtener servicios
+
+`kubectl get service`{{execute}}
+
+Acceder al service mediante port-forward
+
+`kubectl port-forward services/test-service 8000:8000`{{execute}}

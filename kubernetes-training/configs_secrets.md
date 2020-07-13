@@ -59,17 +59,23 @@ data:
 
 Crear desde un archivo
 
-`kubectl create configmap <configmap-name> --from-file=<file-source>`
+`kubectl create secret <secret-type> <secret-name> --from-file=<file-source>`
 
 Crear usando template
 
-`kubectl create -f configmap.yaml`{{execute}}
+`kubectl create -f secret.yaml`{{execute}}
 
-Obtener configmaps
+Obtener secrets
 
-`kubectl get configmaps`{{execute}}
-`kubectl get cm`{{execute}}
+`kubectl get secrets`{{execute}}
 
 Usar secret en un pod como un volumen
 
 `kubectl create -f pod-secret.yaml`{{execute}}
+
+El secret estara disponible en
+
+```shell
+/etc/secret-volume/username
+/etc/secret-volume/password
+```

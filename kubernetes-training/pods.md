@@ -46,9 +46,14 @@ Crear pod (comando oneliner)
 
 `kubectl run mypod --generator=run-pod/v1 --image nginx`{{execute}}
 
+Obtener pods del namespace predeterminado
+
+`kubectl get pods`{{execute}}
+
 Obtener pods de un namespace especifico
 
 `kubectl get pods -n <namespace>`
+
 `kubectl get pods --namespace <namespace>`
 
 Obtener pods de todos los namespaces
@@ -58,16 +63,16 @@ Obtener pods de todos los namespaces
 
 Debug: problemas en la creación de un POD
 
-`kubectl describe test-pod`{{execute}}
+`kubectl describe pod test-pod`{{execute}}
 
 #### Logs
 
 Obtener logs de un pod
 
-`kubectl logs mypod`{{execute}}
+`kubectl logs test-pod`{{execute}}
 
 Tail logs
-`kubectl logs -f mypod`{{execute}}
+`kubectl logs -f test-pod`{{execute}}
 
 #### Ejecutar comandos en un POD/container
 

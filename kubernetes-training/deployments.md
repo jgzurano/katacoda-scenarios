@@ -1,40 +1,69 @@
-## “Naked” Pods versus ReplicaSets, Deployments, and Jobs
+#### Single Pods vs ReplicaSets, Deployments, and Jobs
 
-Don’t use naked Pods (that is, Pods not bound to a ReplicaSet or Deployment) if you can avoid it. Naked Pods will not be rescheduled in the event of a node failure.
+Problema: un pod que no esta asociado a un replicaSet/Deployment no sera regenerado si el pod termina inesperadamente o si falla el node donde corre.
 
-A Deployment, which both creates a ReplicaSet to ensure that the desired number of Pods is always available, and specifies a strategy to replace Pods (such as RollingUpdate), is almost always preferable to creating Pods directly, except for some explicit restartPolicy: Never scenarios. A Job may also be appropriate.
+Ejemplos de objetos de kubernetes que resuelven este problema y manejan uno o mas pods:
 
-Here are some examples of workload resources that manage one or more Pods:
+#### Controllers
 
-    Deployment
-    StatefulSet
-    DaemonSet
+- Deployment
+- DaemonSet
+- StatefulSet
 
+#### Deployment
 
-PodTemplates are specifications for creating Pods, and are included in workload resources such as Deployments, Jobs, and DaemonSets.
+- Describe un estado deseado (pods, containers), cant de replicas.
+- El Deployment controller se encarga de modificar el estado actual para alcanzar el estado deseado.
+- Permite crear un conjunto de pods iguales (replicas).
+- Crea y destruye Pods dinamicamente.
+- Deployment de nueva revision.
+- Rollback entre las revisiones creadas.
+- Escalar/Reducir cantidad de replicas.
 
-This is your first step.
+Crear deployment
 
-## Task
+`kubectl create -f deployment.yaml`{{execute}}
 
-Este es un ejemplo de __example__
+Listar deployments
+`kubectl get deploy`{{execute}}
 
-This is an _example_ of creating a scenario and running a **command**
+Actualizar imagen usada en un deployment
 
-`echo 'Hello World'`{{execute}}
+`kubectl set image deployment/test-deployment nginx-container=nginx:1.19`
+
+Describe deployment
+
+`kubectl describe deploy test-deployment`
+
+Rollback a version anterior
+
+`kubectl rollout undo deploy test-deployment --to-revision=1`{{execute}}
+
+Chequear cambio en replicaSet
+
+`kubectl get rs`{{execute}}
+
+Controlar cantidad de replicas
+
+`kubectl scale deploy --replicas=5 test-deployment`{{execute}}
 
 #### Otros tipos de controllers
 
-StatefulSets
-
-StatefulSet is the workload API object used to manage stateful applications.
-
 DaemonSet
 
-A DaemonSet ensures that all (or some) Nodes run a copy of a Pod. As nodes are added to the cluster, Pods are added to them. As nodes are removed from the cluster, those Pods are garbage collected. Deleting a DaemonSet will clean up the Pods it created.
+Asegura que todos (o algunos nodos) tengan una copia del pod. Tiene en cuenta si agregamos o eliminamos nodos.
 
-Some typical uses of a DaemonSet are:
+Usos de daemonSets
 
-    running a cluster storage daemon on every node
-    running a logs collection daemon on every node
-    running a node monitoring daemon on every node
+- Cluster storage daemon
+- Logs collection daemon
+- Node monitoring daemon
+
+StatefulSets: Usados para manejar aplicaciones stateful.
+
+Caracteristicas
+
+- Identificadores unicos de red.
+- Almacenamiento persistente.
+- Deployment y scaling ordenado/graceful.
+- Terminación ordenado/graceful.
