@@ -46,7 +46,6 @@
 - Pod level autoscaling: hpa, vpa.
 - Ejemplo.
 
-## Tools adicionales ##
+## Helm ##
 
 - Helm templates.
-- Otras tools.

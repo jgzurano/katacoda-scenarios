@@ -49,10 +49,6 @@
       {
         "title": "Helm",
         "text": "helm.md"
-      },
-      {
-        "title": "Tools adicionales",
-        "text": "tools.md"
       }
     ],
     "intro": {
